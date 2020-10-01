@@ -66,3 +66,11 @@ Update the documentation and trigger a local build:
   $ docker run --rm -v ${PWD}/docs:/src portainer/docbuilder:latest make html
 
 This will create a local folder :file:`docs/build/html` where you will find the generated static files for the documentation.
+
+.. raw:: html
+
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>

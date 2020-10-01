@@ -40,3 +40,11 @@ Portainer can be deployed on the following platforms:
 * Linux s390x
 * Windows amd64
 * Darwin amd64
+
+.. raw:: html
+
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>

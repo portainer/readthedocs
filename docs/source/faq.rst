@@ -16,7 +16,7 @@ If you are still experiencing issues after reading this FAQ, feel free to contac
 How do I reset my Portainer password?
 =====================================
 
-At this stage, you cannot reset your password using Portainer if you have forgotten it. You can however ask another Portainer admin to reset the password for you. 
+At this stage, you cannot reset your password using Portainer if you have forgotten it. You can however ask another Portainer admin to reset the password for you.
 
 There is an open feature request for this functionality which can be tracked on our GitHub repository `here. <https://github.com/portainer/portainer/issues/512>`__
 
@@ -33,8 +33,8 @@ If you wish to have a Total control stack , you will need to deploy it within Po
 Why is my version number not matching the latest version?
 =========================================================
 
-If you have recently updated your version of Portainer, this is an indication that your browser is holding onto the previous version number of Portainer in it's cache. 
-To properly clear your cache, you will need to go into the browser settings and empty the cache. 
+If you have recently updated your version of Portainer, this is an indication that your browser is holding onto the previous version number of Portainer in it's cache.
+To properly clear your cache, you will need to go into the browser settings and empty the cache.
 
 **Note:** You can use ``Ctrl + shift + R`` on most browsers to load the specific page without cache, however you will need to repeat this on each page of Portainer to load the changes.
 
@@ -47,11 +47,11 @@ My licenses/extensions don't activate, what do I do?
 ====================================================
 
 * As stated above, Portainer needs internet access to activate extensions. One way to test is to run a busybox container and see if it can reach the internet via ping or curl.
-* If Portainer can reach the internet then this is not the problem. If you have access to the Portainer data filesystem you can check whether the extension binaries have been downloaded. Navigate to the filesystem in use by Portainer and check the bin directory to make sure the extension has been downloaded. If there is no extensions present, then there is an issue with Portainer downloading the extension. 
+* If Portainer can reach the internet then this is not the problem. If you have access to the Portainer data filesystem you can check whether the extension binaries have been downloaded. Navigate to the filesystem in use by Portainer and check the bin directory to make sure the extension has been downloaded. If there is no extensions present, then there is an issue with Portainer downloading the extension.
 * If the extensions are present, then you may have a permissions issue and they may not be able to run. Check to make sure that they are executable.
 
 **Note:** Open Media Vault mounts filesystems & shared volumes with the ``noexec`` flag by default, meaning Portainer extensions can't be enabled.
-To fix this, remove ``noexec`` from the ``OMV_FSTAB_MNTOPS_EXT4`` variable. If the filesystem or shared volume is already mounted, modify the variable in the fstab section of ``/etc/openmediavault/config.xml``, otherwise modify the variable in ``/etc/default/openmediavault``. 
+To fix this, remove ``noexec`` from the ``OMV_FSTAB_MNTOPS_EXT4`` variable. If the filesystem or shared volume is already mounted, modify the variable in the fstab section of ``/etc/openmediavault/config.xml``, otherwise modify the variable in ``/etc/default/openmediavault``.
 
 Users have access to an endpoint, but they cannot see anything. Why?
 ====================================================================
@@ -64,22 +64,22 @@ Users have access to an endpoint, but they cannot see anything. Why?
 Portainer lost it's configuration, why?
 =======================================
 
-**Portainer as a Container:** If you have not created a persistent volume for your Portainer container, then Portainer data will be stored inside the Docker container. If the container is then restarted, you will lose all of your data. 
+**Portainer as a Container:** If you have not created a persistent volume for your Portainer container, then Portainer data will be stored inside the Docker container. If the container is then restarted, you will lose all of your data.
 
-**Portainer as a Service:** If you have not created a persistent volume for your Portainer service, then Portainer data will be stored inside the Docker container created by the service. If the service is updated, you may lose your Portainer configuration. 
+**Portainer as a Service:** If you have not created a persistent volume for your Portainer service, then Portainer data will be stored inside the Docker container created by the service. If the service is updated, you may lose your Portainer configuration.
 
 `See Deployment <https://portainer.readthedocs.io/en/stable/deployment.html>`__ on how to create a persistent volume. If you have a persistent volume, then the issue may be that Portainer is not constrained to the node where the data is persisted. **See the below section for more info**.
 
 How do I make sure Portainer stays where my data is persisted?
 ==============================================================
 
-Our recommended deployment stack file constrains Portainer to a manager node, when you have multiple managers this will potentially become a problem. Each stack or service **update** action could move the Portainer container between them, and you may see Portainer appear as a fresh install. 
+Our recommended deployment stack file constrains Portainer to a manager node, when you have multiple managers this will potentially become a problem. Each stack or service **update** action could move the Portainer container between them, and you may see Portainer appear as a fresh install.
 
 **The solution is to constrain your Portainer container to the node where your Portainer data is being persisted.**
 
 * Step 1: Following deployment of `our stack file <https://portainer.readthedocs.io/en/stable/deployment.html#inside-a-swarm-cluster>`__ you will need to find the hostname of the node where the Portainer volume is being persisted. Within Portainer, navigate to the volumes view and note down the hostname of your Portainer volume. In this example the hostname is **owner**.
 
-Alternatively you can run ``docker node ls`` and note down the hostname of the node where your Portainer data is persisted. 
+Alternatively you can run ``docker node ls`` and note down the hostname of the node where your Portainer data is persisted.
 
 .. figure:: ./images/Viewing-hostname-of-Portainer-volume.png
     :align: center
@@ -147,7 +147,7 @@ You can either get the logs for Portainer from Portainer's own GUI or from the D
 Published ports in the services view redirect me to *about:blank#blocked*, what can I do?
 =========================================================================================
 
-If you deployed the recommended agent stack or manage the **local** endpoint, you will need to set a public IP on your endpoint for published ports to work on services in Portainer. 
+If you deployed the recommended agent stack or manage the **local** endpoint, you will need to set a public IP on your endpoint for published ports to work on services in Portainer.
 
 **How to set the public IP of an endpoint:**
 
@@ -179,7 +179,7 @@ Clicking on the published port in the Services view should now correctly redirec
 External endpoints are not working in the latest Portainer version, is this a bug?
 ==================================================================================
 
-We are aware that the ``--external-endpoint`` feature is not working in some of the latest versions of Portainer. If you require use of external endpoints, we recommend rolling back to Portainer version 1.21.0 until a fix has been released. 
+We are aware that the ``--external-endpoint`` feature is not working in some of the latest versions of Portainer. If you require use of external endpoints, we recommend rolling back to Portainer version 1.21.0 until a fix has been released.
 
 Where can I find the source code of the Portainer agent?
 ========================================================
@@ -204,7 +204,7 @@ With Portainer behind a proxy, some features requiring access to the Internet (s
 
   $ docker run -d -p 9000:9000 -p 8000:8000 -e HTTP_PROXY=my.proxy.domain:7777 portainer/portainer
 
-For examples on how to configure a reverse proxy to work with Portainer, you can refer to our example repo `here. <https://github.com/portainer/portainer-compose>`__ 
+For examples on how to configure a reverse proxy to work with Portainer, you can refer to our example repo `here. <https://github.com/portainer/portainer-compose>`__
 
 **Note:** these are in no way production ready, and are intended solely for demonstration purposes.
 
@@ -240,3 +240,11 @@ How do I troubleshoot Portainer?
 * If you cannot see anything wrong with your configuration or anything in the container logs, then the next step is to `troubleshoot your environment. <https://portainer.readthedocs.io/en/stable/troubleshooting.html>`__
 
 Make sure that Docker is running with the command ``docker version``.
+
+.. raw:: html
+
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>

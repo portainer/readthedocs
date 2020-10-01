@@ -43,3 +43,11 @@ Next, make sure you are using the ``--advertise-addr`` option.
 
 - When creating the cluster via ``docker swarm init``, use ``--advertise-addr`` with either the private IP address or NIC name directly (``--advertise-addr eth1`` for example)
 - When joining a cluster on worker nodes via ``docker swarm join``, use ``--advertise-addr`` the same as above with either private IP address or NIC name directly
+
+.. raw:: html
+
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>

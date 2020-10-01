@@ -269,3 +269,11 @@ API
 
 If you want to use the Portainer API to query containers running on a specific node inside a Swarm cluster and when using the Portainer agent setup, you can specify the ``X-PortainerAgent-Target`` header in the HTTP request to target a specific node in the cluster.
 The value must be set to the name of a specific node that can be retrieved via the ``NodeName`` property when querying cluster resources (containers, volumes...).
+
+.. raw:: html
+
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>

@@ -110,3 +110,11 @@ Portainer will then read the file based on the interval defined in ``--sync-inte
 
 When using external endpoint management, endpoint management will via the UI will be disabled to avoid any possible configuration overwrite (the endpoints view is still accessible but will only display the list of endpoints without giving the possibility to create/update endpoints).
 A simple warning message will be displayed in the endpoints view.
+
+.. raw:: html
+
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>
