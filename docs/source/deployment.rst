@@ -231,10 +231,10 @@ You can change the folder used by Portainer to store its data with the ``--data`
 
   $ ./portainer --data /opt/portainer-data
 
-  .. raw:: html
+.. raw:: html
 
-      <script type="text/javascript">
-      if (String(window.location).indexOf("readthedocs") !== -1) {
-          window.location.replace('https://documentation.portainer.io/');
-      }
-      </script>
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>

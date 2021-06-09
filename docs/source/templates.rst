@@ -606,10 +606,11 @@ You can also mount the ``templates.json`` file inside the container, so you can 
 
   $ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/templates.json" portainer-templates
 
-  .. raw:: html
 
-      <script type="text/javascript">
-      if (String(window.location).indexOf("readthedocs") !== -1) {
-          window.location.replace('https://documentation.portainer.io/');
-      }
-      </script>
+.. raw:: html
+
+    <script type="text/javascript">
+    if (String(window.location).indexOf("readthedocs") !== -1) {
+        window.location.replace('https://documentation.portainer.io/');
+    }
+    </script>
