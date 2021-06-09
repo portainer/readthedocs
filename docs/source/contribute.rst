@@ -71,6 +71,6 @@ This will create a local folder :file:`docs/build/html` where you will find the 
 
     <script type="text/javascript">
     if (String(window.location).indexOf("readthedocs") !== -1) {
-        window.location.replace('https://documentation.portainer.io/');
+        window.location.replace('https://documentation.portainer.io/quickstart/');
     }
     </script>

@@ -14,6 +14,6 @@ also find some examples `here <https://gist.github.com/deviantony/77026d402366b4
 
     <script type="text/javascript">
     if (String(window.location).indexOf("readthedocs") !== -1) {
-        window.location.replace('https://documentation.portainer.io/');
+        window.location.replace('https://documentation.portainer.io/quickstart/');
     }
     </script>

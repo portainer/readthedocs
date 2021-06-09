@@ -611,6 +611,6 @@ You can also mount the ``templates.json`` file inside the container, so you can 
 
     <script type="text/javascript">
     if (String(window.location).indexOf("readthedocs") !== -1) {
-        window.location.replace('https://documentation.portainer.io/');
+        window.location.replace('https://documentation.portainer.io/quickstart/');
     }
     </script>
